@@ -1,0 +1,26 @@
+#! /bin/sh -l
+
+# Refresh the local Papers We Love repo.
+# NOTE: Assumes git is configured on the machine this script runs on!
+#
+# Update repo with default repo location:
+# $ update_papers
+#
+# Update repo with specified repo location:
+# $ update_papers /path/to/papers_we_love
+
+script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+papers_we_love_repo="${script_dir}/papers_we_love"
+pull_log="${script_dir}/pull.log"
+
+if [ ! -d ${papers_we_love_repo} ]
+then
+    echo "$(date) - ${papers_we_love_repo} is not available."
+    exit 1
+fi
+
+# Update the repo.
+cd $papers_we_love_repo
+git pull || { echo "$(date) - Update FAILED." | tee -a ${pull_log} ; cd - ; exit 1 ; }
+cd -
+echo "$(date) - Update complete." | tee -a ${pull_log}
