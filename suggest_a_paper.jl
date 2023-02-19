@@ -114,7 +114,7 @@ end
 Suggest paper to endpoint.
 """
 function suggest(paper::Paper)
-    println("How about reading '$(paper.title)' @ $(paper.url)?")
+    println("How about reading '$(paper.title)' @ $(paper.url) ?")
 end
 
 function suggest(paper::Paper, url::AbstractString)
@@ -125,7 +125,7 @@ function suggest(paper::Paper, url::AbstractString)
         "Accept" => "application/json"
     ]
     body = """{
-        "content": "How about reading '$(paper.title)' @ $(paper.url)?"
+        "content": "How about reading '$(paper.title)' @ $(paper.url) ?"
     }"""
     
     # Server will silently fail if something goes wrong, so ignore the response.
