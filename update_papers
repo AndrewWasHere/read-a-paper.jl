@@ -10,7 +10,7 @@
 # $ update_papers /path/to/papers_we_love
 
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-papers_we_love_repo="${script_dir}/papers_we_love"
+papers_we_love_repo="${script_dir}/papers-we-love"
 pull_log="${script_dir}/pull.log"
 
 if [ ! -d ${papers_we_love_repo} ]
