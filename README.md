@@ -48,6 +48,7 @@ See https://crontab.guru for help setting up crontab.
 ## Dependencies
 
 * Julia 1.8+
+* HTTP.jl
 * git
 
 ## License
