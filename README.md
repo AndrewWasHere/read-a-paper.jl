@@ -26,7 +26,7 @@ $ git clone https://github.com/papers-we-love/papers-we-love.git
 Run the `suggest_a_paper.jl` script from the command line to see it in action.
 
 ```shell
-$ julia suggest_a_paper.jl
+$ julia --project=. suggest_a_paper.jl
 ```
 
 Or run it from a cron job via the helper script. While you're there, set up a 
