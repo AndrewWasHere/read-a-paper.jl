@@ -49,3 +49,8 @@ See https://crontab.guru for help setting up crontab.
 
 * Julia 1.8+
 * git
+
+## License
+
+MIT License. See LICENSE.txt.
+
