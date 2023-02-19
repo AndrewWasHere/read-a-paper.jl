@@ -1,4 +1,8 @@
 #! /bin/bash -l
+
+# You may have to substitute a hard-coded script_dir for the programmatically-
+# derived version.
+# script_dir=${HOME}/path/to/here
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd ${script_dir}

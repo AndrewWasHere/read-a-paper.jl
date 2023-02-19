@@ -9,6 +9,9 @@
 # Update repo with specified repo location:
 # $ update_papers /path/to/papers_we_love
 
+# You may have to substitute a hard-coded script_dir for the programmatically-
+# derived version.
+# script_dir=${HOME}/path/to/here
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 papers_we_love_repo="${script_dir}/papers-we-love"
 pull_log="${script_dir}/pull.log"
