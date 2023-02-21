@@ -61,7 +61,7 @@ function papers_in_readme(root::AbstractString, file::AbstractString, repo::Repo
     papers = Vector{Paper}()
     base_url = link_url(root, repo)
     for line in eachline(joinpath(root, file))
-        m = match(r"\[(.*)\]\((.*)\)", line)
+        m = match(r"\[(?!:[a-z\-_]+:)(.*?)\]\((.*?)\)", line)
         if isnothing(m) || ! endswith(lowercase(m[2]), ".pdf")
             continue
         end
